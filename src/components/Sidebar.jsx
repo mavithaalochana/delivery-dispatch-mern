@@ -1,11 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { LogOut, X } from "lucide-react";
 import { sidebarSections } from "../data/navigation";
 
 export default function Sidebar({ isOpen, onClose }) {
   return (
     <>
-      {/* Mobile dark overlay - click කලොත් sidebar close වෙනවා */}
       {isOpen && (
         <div className="fixed inset-0 z-40 bg-black/50 md:hidden" onClick={onClose} />
       )}
@@ -42,18 +42,34 @@ export default function Sidebar({ isOpen, onClose }) {
               </div>
               {section.items.map((item) => {
                 const Icon = item.icon;
+                if (!item.path) {
+                  return (
+                    <button
+                      key={item.name}
+                      className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+                    >
+                      <Icon className="h-4 w-4 shrink-0" />
+                      {item.name}
+                    </button>
+                  );
+                }
                 return (
-                  <button
+                  <NavLink
                     key={item.name}
-                    className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] transition-colors ${
-                      item.active
-                        ? "bg-orange-500 text-white font-medium"
-                        : "text-slate-300 hover:bg-slate-800 hover:text-white"
-                    }`}
+                    to={item.path}
+                    end
+                    onClick={onClose}
+                    className={({ isActive }) =>
+                      `flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] transition-colors ${
+                        isActive
+                          ? "bg-orange-500 text-white font-medium"
+                          : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                      }`
+                    }
                   >
                     <Icon className="h-4 w-4 shrink-0" />
                     {item.name}
-                  </button>
+                  </NavLink>
                 );
               })}
             </div>

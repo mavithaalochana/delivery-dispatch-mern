@@ -49,9 +49,9 @@ export const sidebarSections = [
     items: [
       { name: "Suppliers", icon: Truck },
       { name: "Receiving", icon: PackageCheck },
-      { name: "Deliveries", icon: Truck, active: true },
+      { name: "Deliveries", icon: Truck, path: "/" },
       { name: "Work Orders", icon: Wrench },
-      { name: "Appointments", icon: CalendarDays },
+      { name: "Appointments", icon: CalendarDays, path: "/appointments" },
       { name: "Employees", icon: UserCog },
     ],
   },

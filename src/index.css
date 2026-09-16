@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Sidebar scrollbar - dark theme match */
+nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+nav::-webkit-scrollbar-track {
+  background: #0f172a; /* slate-900 - sidebar background */
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: #475569; /* slate-600 */
+  border-radius: 3px;
+}
+
+nav::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* slate-500 */
+}
