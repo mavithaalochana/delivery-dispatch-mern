@@ -50,7 +50,7 @@ export const sidebarSections = [
       { name: "Suppliers", icon: Truck },
       { name: "Receiving", icon: PackageCheck },
       { name: "Deliveries", icon: Truck, path: "/" },
-      { name: "Work Orders", icon: Wrench },
+      { name: "Work Orders", icon: Wrench, path: "/work-orders" },
       { name: "Appointments", icon: CalendarDays, path: "/appointments" },
       { name: "Employees", icon: UserCog },
     ],

@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import DeliveryPage from "./pages/DeliveryPage";
 import AppointmentsPage from "./pages/AppointmentsPage";
+import WorkOrdersPage from "./pages/WorkOrdersPage";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<DeliveryPage />} />
               <Route path="/appointments" element={<AppointmentsPage />} />
+              <Route path="/work-orders" element={<WorkOrdersPage />} />
             </Routes>
           </main>
         </div>
