@@ -53,6 +53,7 @@ export const sidebarSections = [
       { name: "Work Orders", icon: Wrench, path: "/work-orders" },
       { name: "Appointments", icon: CalendarDays, path: "/appointments" },
       { name: "Employees", icon: UserCog },
+      { name: "Store Configuration", icon: Settings, path: "/store-locations" },
     ],
   },
   {

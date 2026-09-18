@@ -5,6 +5,7 @@ import Topbar from "./components/Topbar";
 import DeliveryPage from "./pages/DeliveryPage";
 import AppointmentsPage from "./pages/AppointmentsPage";
 import WorkOrdersPage from "./pages/WorkOrdersPage";
+import StoreLocationsPage from "./pages/StoreLocationsPage";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function App() {
               <Route path="/" element={<DeliveryPage />} />
               <Route path="/appointments" element={<AppointmentsPage />} />
               <Route path="/work-orders" element={<WorkOrdersPage />} />
+              <Route path="/store-locations" element={<StoreLocationsPage />} />
             </Routes>
           </main>
         </div>
