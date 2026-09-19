@@ -53,16 +53,16 @@ export const sidebarSections = [
       { name: "Work Orders", icon: Wrench, path: "/work-orders" },
       { name: "Appointments", icon: CalendarDays, path: "/appointments" },
       { name: "Employees", icon: UserCog },
-      { name: "Store Configuration", icon: Settings, path: "/store-locations" },
+
     ],
   },
   {
     label: "Financials & Settings",
     items: [
-      { name: "Invoices & Aging", icon: FileText },
+      { name: "Invoices & Aging", icon: FileText, path: "/invoices" },
       { name: "Expenses", icon: Receipt },
       { name: "Reports Hub", icon: BarChart3 },
-      { name: "Store Configuration", icon: Settings },
+      { name: "Store Configuration", icon: Settings, path: "/store-locations" },
     ],
   },
 ];
